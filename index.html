@@ -39,11 +39,13 @@
         const toggleBtnIcon = document.querySelector('.toggle-btn i')
         const despegable = document.querySelector('.despegable')
 
+
         toggleBtn.onclick = function () {
             despegable.classList.toggle('open')
-            const isOpen = despegable.classlist.contains('open')
+            const isOpen = despegable.classList.contains('open')
 
-            toggleBtnIcon.classlist = isOpen
+            console.log(isOpen)
+            toggleBtnIcon.classList = isOpen
                 ? 'fa-solid fa-xmark'
                 : 'fa-solid fa-bars'
         }
