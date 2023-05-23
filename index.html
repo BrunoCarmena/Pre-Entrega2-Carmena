@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/ce4e31fb45.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Eleven Wines</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo"><a href="">Eleven Wines</a></div>
+            <ul class="links">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Destacados</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="despegable">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Productos</a></li>
+            <li><a href="">Destacados</a></li>
+            <li><a href="">Ofertas</a></li>
+            <li><a href="">Contacto</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const despegable = document.querySelector('.despegable')
+
+        toggleBtn.onclick = function () {
+            despegable.classList.toggle('open')
+            const isOpen = despegable.classlist.contains('open')
+
+            toggleBtnIcon.classlist = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <main class="main">
+        <section class="home">
+            <div class="home-content">
+                <div class="cajas">
+                    <div class="cajauno">
+                        <h2>Somos Eleven Wines</h2>
+                    </div>
+                    <div class="cajados">
+                        <p>Somos una vinoteca comprometida con ofrecer la mejor selección de vinos de la región. Con más
+                            de 20 años de experiencia, nos enorgullece ser un referente en el sector.</p>
+                    </div>
+                </div>
+                <div class="img-frente">
+                    <img src="/img/frente.jpg" alt="vinoteca-frente">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Contactanos</h4>
+                    <ul>
+                        <li>+54-3412345678</li>
+                        <li>+54-3415678981</li>
+                        <li>Ovidio Lagos 522, Rosario - Santa Fe - Argentina</li>
+                        <li>Elevenwines@hotmail.com</li>
+                        <li>Horarios: Lunes a Sabados de 08:00 a 20:30</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegacion</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="./pages/productos.html">Productos</a></li>
+                        <li><a href="./pages/destacados.html">Destacados</a></li>
+                        <li><a href="./pages/gourmet.html">Gourmet</a></li>
+                        <li><a href="./pages/contacto.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Metodos De Pago</h4>
+                    <ul>
+                        <li><i class='bx bxs-bank color'></i>Transferencia</li>
+                        <li><i class='bx bx-money'></i>Efectivo</li>
+                        <li><i class='bx bx-credit-card'></i>Tarjetas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
