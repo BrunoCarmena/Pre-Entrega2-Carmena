@@ -171,7 +171,8 @@ a:hover{
 
 .img-frente img {
     display: flex;
-    width: 45vw;
+    margin-top: 75px;
+    width: 100vw;
     border-radius: 10%;
 }
 
