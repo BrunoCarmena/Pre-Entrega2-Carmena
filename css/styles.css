@@ -12,9 +12,6 @@ body {
 header {
     position: relative;
     padding: 0 2rem;
-    /* display: flex;
-    flex-direction: row;
-    gap: 3%; */
 }
 
 .eleven {
@@ -25,13 +22,13 @@ header {
 }
 
 li{
-    list-style: none;
+    list-style: none;;
 }
 
 a{
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 a:hover{
@@ -49,7 +46,7 @@ a:hover{
 }
 
 .logo a{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -65,7 +62,7 @@ a:hover{
 
 .navbar .links{
     display: flex;
-    gap: 2rem;
+    gap: 2rem;;
 }
 
 .navbar .toggle-btn{
