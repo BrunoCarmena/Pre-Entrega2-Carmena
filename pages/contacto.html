@@ -17,13 +17,39 @@
         <nav class="navbar">
             <div class="logo"><a href="">Eleven Wines</a></div>
             <ul class="links">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="../pages/productos.html">Productos</a></li>
-                <li><a href="../pages/destacados.html">Destacados</a></li>
-                <li><a href="../pages/gourmet.html">Gourmet</a></li>
-                <li><a class="active" href="../pages/contacto.html">Contacto</a></li>
+                <li><a class="active" href="/index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/destacados.html">Destacados</a></li>
+                <li><a href="./pages/gourmet.html">Gourmet</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
+        <div class="despegable">
+            <li><a class="active" href="#">Inicio</a></li>
+            <li><a href="./pages/productos.html">Productos</a></li>
+            <li><a href="./pages/destacados.html">Destacados</a></li>
+            <li><a href="./pages/gourmet.html">Gourmet</a></li>
+            <li><a href="./pages/contacto.html">Contacto</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const despegable = document.querySelector('.despegable')
+
+
+        toggleBtn.onclick = function () {
+            despegable.classList.toggle('open')
+            const isOpen = despegable.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
     </header>
     <div class="container-form">
         <div class="info-form">
