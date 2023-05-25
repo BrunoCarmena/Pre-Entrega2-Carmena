@@ -1,5 +1,5 @@
-# **Pre-Entrega2-CarmenaBruno**
-## Segunda entrega del trabajo realizado para CODERHOUSE
+# Pre-Entrega2-Carmena
+Segunda entrega del trabajo para CODERHOUSE
 
 ### Hola soy Bruno Carmena
 a continuacion les estare mostrando mi proyecto realizado para una vinoteca amiga
