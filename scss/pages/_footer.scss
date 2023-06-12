@@ -1,0 +1,55 @@
+@import '../breakpoints';
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 650px;
+
+    @include tablet{
+        padding-top: 60px;
+        margin-left: 120px;
+    }
+}
+
+
+.footer {
+    background-color: #24262b;
+    padding: 80px 0
+}
+
+.footer-row {
+    display: flex;
+}
+
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+
+    h4 {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 25px;
+        font-weight: 500;
+        border-bottom: 2px solid #00c3ff;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    ul li {
+        color: white;
+        margin-bottom: 15px;
+
+        a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #BBBBBB;
+            display:flex;
+            margin-bottom: 15px;
+            transition: all .3s ease;
+
+            & hover {
+                color: white padding-left 6px
+            }
+        }
+    }
+}

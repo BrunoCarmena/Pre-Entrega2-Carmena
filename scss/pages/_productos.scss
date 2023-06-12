@@ -1,0 +1,119 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px;
+}
+
+.items {
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+    .titulo {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #000;
+
+        h3 {
+            font-size: 44px;
+            color: #5ee4cd;
+        }
+    }
+
+    .producto {
+        padding: 20px 5px;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 43%;
+            margin: 0 130px;
+        }
+
+        .detalle {
+            height: 100%;
+            margin: 0 20px;
+            width: 60%;
+            color: #5ee4cd;
+
+            h2 {
+                font-size: 22px;
+                padding: 10px 0;
+                border-bottom: 1px solid #999;
+            }
+
+            p {
+                font-size: 20px;
+                color: #5ee4cd;
+                padding: 10px 0;
+            }
+
+            .sabor {
+                h3 {
+                    font-size: 22px;
+                    margin: 10px 0;
+                    color: #00c3ff;
+                }
+            }
+
+            .qty {
+                margin: 10px 0;
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+
+                h4 {
+                    margin-right: 30px;
+                    font-size: 22px;
+
+                    input {
+                        width: 60px;
+                        height: 45px;
+                        font-size: 22px;
+                        text-align: center;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid #000;
+                    }
+                }
+
+                button {
+                    height: 40px;
+                    padding: 0 20%;
+                    font-size: 15px;
+                    border: none;
+                    color: #006b97;
+                    cursor: pointer;
+                    margin: 0 10px;
+                    transition: 0.5s;
+                    border-radius: 2px;
+
+                    &:hover {
+                        background: #006b97;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .precio {
+            height: 100%;
+            margin: 0 20px;
+            width: 20%;
+            text-align: right;
+
+            p {
+                font-size: 36px;
+                padding: 10px 0;
+                color: #5ee4cd;
+            }
+        }
+    }
+}

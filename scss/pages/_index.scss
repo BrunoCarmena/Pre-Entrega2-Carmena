@@ -1,0 +1,87 @@
+@import '../breakpoints';
+
+
+.main {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home {
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .home-content {
+        display: flex;
+        width: 90vw;
+        height: 80vh;
+
+        @include tablet{
+            width: 93vw;
+            height: 76vh;
+        }
+    }
+}
+
+.cajas {
+    display: flex;
+    height: 80vh;
+    width: 45vw;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+
+    .cajauno {
+        display: flex;
+        height: 20vh;
+        width: 45vw;
+        justify-content: end;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 6vh;
+            color: white;
+        }
+    }
+
+    .cajados {
+        display: flex;
+        height: 40vh;
+        width: 45vw;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        p {
+            font-size: 3vh;
+            color: #5ee4cd;
+
+            @include tablet{
+                width: 38vw;
+            }
+        }
+    }
+}
+
+.img-frente {
+    display: flex;
+    height: 80vh;
+    width: 45vw;
+    padding: 0px 150px;
+
+    @include tablet{
+        height: 62vh;
+        width: 11vw;
+        padding: 0px;
+    }
+
+    img {
+        display: flex;
+        margin-top: 75px;
+        width: 100vw;
+        border-radius: 10%;
+    }
+}
