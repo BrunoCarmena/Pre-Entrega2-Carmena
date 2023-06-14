@@ -29,9 +29,6 @@ a {
   .navbar .logo a {
     font-size: 2.5rem;
     font-weight: bold; }
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .navbar .logo a {
-        font-size: 1.5rem; } }
   .navbar .links {
     display: flex;
     gap: 2rem; }
@@ -66,7 +63,7 @@ a {
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .despegable.open {
     height: 240px; }
   .despegable li {
@@ -115,18 +112,44 @@ a {
     min-width: 530px;
     max-height: 150px;
     min-height: 140px; }
-  .container-form .btn {
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    outline: 0px;
-    background: black;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 300ms ease; }
-    .container-form .btn:hover {
-      background: black; }
+  .container-form .btn-contacto {
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    z-index: 2;
+    border: 3px solid #17a2ff;
+    overflow: hidden; }
+    .container-form .btn-contacto::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #750031;
+      z-index: -2; }
+    .container-form .btn-contacto::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 250px;
+      left: 0;
+      bottom: -150%;
+      border-radius: 30%;
+      background-color: #151E3F;
+      z-index: -1; }
+    .container-form .btn-contacto:hover::before {
+      animation: btn-contacto 2s linear both; }
+
+@keyframes btn-contacto {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    bottom: 100px;
+    transform: rotate(360deg); } }
 
 .container-contactos {
   padding-top: 100px;
@@ -136,10 +159,6 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 650px; }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .container {
-      padding-top: 60px;
-      margin-left: 120px; } }
 
 .footer {
   background-color: #24262b;
@@ -185,10 +204,6 @@ a {
     display: flex;
     width: 90vw;
     height: 80vh; }
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-      .home .home-content {
-        width: 93vw;
-        height: 76vh; } }
 
 .cajas {
   display: flex;
@@ -218,20 +233,12 @@ a {
     .cajas .cajados p {
       font-size: 3vh;
       color: #5ee4cd; }
-      @media only screen and (min-width: 481px) and (max-width: 768px) {
-        .cajas .cajados p {
-          width: 38vw; } }
 
 .img-frente {
   display: flex;
-  height: 80vh;
-  width: 45vw;
+  height: 80%;
+  width: 45%;
   padding: 0px 150px; }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .img-frente {
-      height: 62vh;
-      width: 11vw;
-      padding: 0px; } }
   .img-frente img {
     display: flex;
     margin-top: 75px;
@@ -242,7 +249,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   padding: 40px; }
 
 .items {
@@ -265,9 +272,18 @@ a {
     margin: 0 20px;
     display: flex;
     align-items: center; }
-    .items .producto img {
-      width: 43%;
-      margin: 0 130px; }
+    @media only screen and (max-width: 480px) {
+      .items .producto {
+        padding: 12px 0px;
+        margin: 0 -60px;
+        display: flex;
+        align-items: center; } }
+    .items .producto .imagen {
+      width: 100%;
+      height: 100%; }
+      .items .producto .imagen img {
+        width: 45%;
+        margin: 0 115px; }
     .items .producto .detalle {
       height: 100%;
       margin: 0 20px;
@@ -281,6 +297,10 @@ a {
         font-size: 20px;
         color: #5ee4cd;
         padding: 10px 0; }
+        @media only screen and (max-width: 480px) {
+          .items .producto .detalle p {
+            font-size: 18px;
+            padding: 0px; } }
       .items .producto .detalle .sabor h3 {
         font-size: 22px;
         margin: 10px 0;
@@ -301,25 +321,257 @@ a {
             outline: none;
             border: none;
             border-bottom: 1px solid #000; }
-        .items .producto .detalle .qty button {
-          height: 40px;
-          padding: 0 20%;
-          font-size: 15px;
-          border: none;
-          color: #006b97;
-          cursor: pointer;
-          margin: 0 10px;
-          transition: 0.5s;
-          border-radius: 2px; }
-          .items .producto .detalle .qty button:hover {
-            background: #006b97;
-            color: #fff; }
+          @media only screen and (max-width: 480px) {
+            .items .producto .detalle .qty h4 {
+              margin-right: 20px;
+              font-size: 20px; } }
+        @media only screen and (max-width: 480px) {
+          .items .producto .detalle .qty {
+            padding: 0px 15px;
+            font-size: 16px;
+            margin: 0px 0px; } }
+        .items .producto .detalle .qty .btn-1 {
+          position: relative;
+          padding: 20px 50px;
+          text-decoration: none;
+          color: #000;
+          letter-spacing: 10px;
+          text-indent: 10px;
+          z-index: 2; }
+          .items .producto .detalle .qty .btn-1:hover:before {
+            top: 0;
+            border-radius: 0%; }
+          .items .producto .detalle .qty .btn-1::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            left: 0;
+            top: -200%;
+            background-color: #750031;
+            border-radius: 50%;
+            transition: all 0.6s ease;
+            z-index: -1; }
+          .items .producto .detalle .qty .btn-1 {
+            overflow: hidden;
+            border: 3px solid #750031;
+            z-index: 2; }
+        .items .producto .detalle .qty .btn-2 {
+          border: 3px solid; }
+          .items .producto .detalle .qty .btn-2:hover {
+            background-color: #001a2b;
+            box-shadow: 0 0 20px var(--color);
+            border-color: var(--color); }
+          .items .producto .detalle .qty .btn-2 span:nth-child(n) {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 3px solid;
+            transition: all 0.6s ease; }
+          .items .producto .detalle .qty .btn-2 span:nth-child(1) {
+            right: 10%;
+            top: -10px;
+            background-color: #fff; }
+          .items .producto .detalle .qty .btn-2 span:nth-child(2) {
+            left: 10%;
+            bottom: -10px; }
+          .items .producto .detalle .qty .btn-2:hover span:nth-child(1) {
+            right: 80%;
+            transform: rotate(90deg);
+            color: var(--color);
+            background-color: var(--color); }
+          .items .producto .detalle .qty .btn-2:hover span:nth-child(2) {
+            left: 80%;
+            transform: rotate(90deg);
+            color: var(--color); }
+      @media only screen and (max-width: 480px) {
+        .items .producto .detalle {
+          margin: 10px 0px;
+          padding: 5px 0px; } }
+  .items .precio {
+    height: 100%;
+    margin: 0 20px;
+    width: 20%;
+    text-align: right; }
+    .items .precio p {
+      font-size: 36px;
+      padding: 10px 0;
+      color: #5ee4cd; }
+
+@media only screen and (max-width: 480px) {
+  padding: 0px;
+  margin-top: 150px; }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .home-content {
+    height: 70vh;
+    padding: 0 32px; }
+  .cajas {
+    width: 90%;
+    margin-top: 32px;
+    margin-bottom: 32px; }
+  .cajauno {
+    height: 25vh;
+    padding: 32px; }
+  .cajados {
+    height: 45vh;
+    padding: 32px; }
+    .cajados p {
+      font-size: 2.8vh; }
+  .img-frente {
+    padding: 0 32px; }
+  .container {
+    padding-top: 200px; }
+  .footer-links {
+    width: 50%;
+    margin-bottom: 30px; }
+    .footer-links h4 {
+      font-size: 18px; }
+    .footer-links ul li a {
+      font-size: 16px; } }
+
+@media only screen and (max-width: 480px) {
+  .contenedor {
+    padding: 0; }
+  .items .producto {
+    padding: 0;
+    margin: 0; }
+    .items .producto .imagen {
+      width: 30%;
+      display: flex; }
+      .items .producto .imagen img {
+        max-width: 100%;
+        margin: 0;
+        width: auto; }
+    .items .producto .detalle {
+      width: 40%; }
+      .items .producto .detalle h2 {
+        font-size: 15px; }
+      .items .producto .detalle p {
+        font-size: 14px;
+        line-height: 1; }
+      .items .producto .detalle .qty {
+        display: flex;
+        flex-direction: column; }
     .items .producto .precio {
-      height: 100%;
-      margin: 0 20px;
-      width: 20%;
-      text-align: right; }
+      width: 15%;
+      margin: 0; }
       .items .producto .precio p {
-        font-size: 36px;
-        padding: 10px 0;
-        color: #5ee4cd; }
+        font-size: 15px; } }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .contenedor {
+    padding: 0;
+    width: 765px; }
+  .items {
+    margin-top: 20px; }
+    .items .titulo h3 {
+      font-size: 32px; }
+    .items .producto {
+      padding: 0;
+      margin: 0; }
+      .items .producto .imagen {
+        width: 32%; }
+      .items .producto img {
+        width: 30%;
+        margin: 0 10px; }
+      .items .producto .detalle {
+        width: 35%;
+        margin: 0 5px; }
+        .items .producto .detalle h2 {
+          font-size: 18px; }
+        .items .producto .detalle p {
+          font-size: 16px; }
+        .items .producto .detalle .sabor h3 {
+          font-size: 18px;
+          margin: 5px 0; }
+        .items .producto .detalle .qty h4 {
+          margin-right: 10px;
+          font-size: 18px; }
+        .items .producto .detalle .qty h4 input {
+          width: 40px;
+          height: 30px;
+          font-size: 18px; }
+        .items .producto .detalle .qty button {
+          height: 30px;
+          padding: 0 10%;
+          font-size: 12px;
+          margin: 0 5px; }
+      .items .producto .precio {
+        width: 15%;
+        margin: 0;
+        text-align: left; }
+        .items .producto .precio p {
+          font-size: 24px; } }
+
+@media only screen and (max-width: 768px) {
+  .navbar .links {
+    display: none; }
+  .navbar .toggle-btn {
+    display: block; }
+  .despegable {
+    display: block; }
+  .container-form {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin-top: 50px; }
+    .container-form h2 {
+      font-size: 28px;
+      margin-bottom: 10px; }
+    .container-form p {
+      font-size: 15px;
+      margin-bottom: 20px; }
+    .container-form a {
+      font-size: 15px;
+      margin-bottom: 10px; }
+    .container-form form .campo,
+    .container-form textarea {
+      font-size: 14px;
+      padding: 10px;
+      margin-bottom: 15px; }
+    .container-form form textarea {
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 120px;
+      min-height: 100px; }
+  .container-contactos {
+    padding-top: 50px;
+    margin-left: 0; }
+  .container {
+    padding-top: 200px; }
+  .footer-row {
+    flex-direction: column; }
+    .footer-row .footer-links {
+      width: 32%;
+      margin-bottom: 40px; }
+      .footer-row .footer-links h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        border: none;
+        display: block; }
+      .footer-row .footer-links ul li a {
+        font-size: 16px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container-form {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin-top: 50px; }
+    .container-form form textarea {
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 120px;
+      min-height: 110px; }
+  .container-contactos {
+    margin-left: 0;
+    text-align: center; }
+  .container {
+    padding-top: 200px; }
+  .footer-links {
+    width: 50%;
+    margin-bottom: 30px; }
+    .footer-links h4 {
+      font-size: 18px; }
+    .footer-links ul li a {
+      font-size: 16px; } }

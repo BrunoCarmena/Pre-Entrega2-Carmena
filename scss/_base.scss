@@ -40,10 +40,6 @@ a {
     & .logo a {
         font-size: 2.5rem;
         font-weight: bold;
-
-        @include tablet {
-            font-size: 1.5rem;
-        }
     }
 
     & .links {
@@ -52,12 +48,16 @@ a {
 
         li {
             list-style: none;
+
+
         }
 
         a {
             text-decoration: none;
             color: #fff;
             font-size: 20px;
+
+
 
             &:hover {
                 color: #5ee4cd;
@@ -93,7 +93,9 @@ a {
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
 
     &.open {
         height: 240px;
