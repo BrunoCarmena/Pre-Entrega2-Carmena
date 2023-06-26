@@ -236,13 +236,13 @@ a {
 
 .img-frente {
   display: flex;
-  height: 80%;
-  width: 45%;
+  height: 80vh;
+  width: 45vw;
   padding: 0px 150px; }
   .img-frente img {
     display: flex;
     margin-top: 75px;
-    width: 100vw;
+    width: 100vh;
     border-radius: 10%; }
 
 .contenedor {
@@ -398,10 +398,6 @@ a {
       padding: 10px 0;
       color: #5ee4cd; }
 
-@media only screen and (max-width: 480px) {
-  padding: 0px;
-  margin-top: 150px; }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .home-content {
     height: 70vh;
@@ -430,7 +426,26 @@ a {
     .footer-links ul li a {
       font-size: 16px; } }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 769px) {
+  .home {
+    height: 60vh; }
+    .home .home-content {
+      height: unset; }
+  .cajas {
+    height: unset; }
+    .cajas .cajauno {
+      height: unset; }
+      .cajas .cajauno h2 {
+        font-size: 4vh; }
+    .cajas .cajados {
+      height: unset; }
+      .cajas .cajados p {
+        font-size: 2vh; }
+  .img-frente {
+    padding: 0;
+    height: 32vh; }
+    .img-frente img {
+      margin-top: unset; }
   .contenedor {
     padding: 0; }
   .items .producto {
@@ -538,9 +553,10 @@ a {
     padding-top: 50px;
     margin-left: 0; }
   .container {
-    padding-top: 200px; }
+    padding-top: 0px; }
   .footer-row {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     .footer-row .footer-links {
       width: 32%;
       margin-bottom: 40px; }

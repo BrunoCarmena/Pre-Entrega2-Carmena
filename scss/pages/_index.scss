@@ -59,15 +59,14 @@
 
 .img-frente {
     display: flex;
-    height: 80%;
-    width: 45%;
+    height: 80vh;
+    width: 45vw;
     padding: 0px 150px;
 
     img {
         display: flex;
         margin-top: 75px;
-        width: 100vw;
+        width: 100vh;
         border-radius: 10%;
     }
-    
 }
